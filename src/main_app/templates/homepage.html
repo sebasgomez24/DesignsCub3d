@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{% block content %}
+    <div class="jumbotron intro-jumbotron">
+        <img style="height: 400px;" src="/static/images/pixel-white.png"/>
+    </div>
+    <div class="container">
+        <div class="col-md-5">            
+            <h3>We at Parallel bring your ideas to life</h3>
+            <p>Load, store and view your 3D models on your computers or tablets and phones</p>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-4">            
+            <form class="register-form" enctype="multipart/form-data" method="post" action="/register/">
+                {% csrf_token %}
+                {% bootstrap_form register_form %}
+                <button class="btn btn-default green" type="submit" value="register">register</button>
+            </form>        
+        </div>
+    </div>
+    
+    <div class="banner">
+        <h1>Hello World, <br/><small>welcome to Parallel</small></h1>
+    </div>
+
+    <div class="container">
+        <div class="col-md-5">
+            <div class="caption">
+                <h3>Upload 3D models</h3>
+                <p>Save your models in a secure place and view them anywhere you want by downloading our app on your smartphone or tablet</p>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+            <div class="intro-img">
+                <img src="/static/images/3dmax.png">    
+            </div>
+        </div>
+    </div>
+    <div class="row separator"></div>
+    <div class="container">
+        <div class="col-md-5">
+            <div class="intro-img">
+                <img src="/static/images/sphere.png">
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">            
+            <div class="caption">
+                <h3>View models in AR</h3>
+                <p>Save your models in a secure place and view them anywhere you want by downloading our app on your smartphone or tablet</p>
+            </div>
+        </div>
+    </div>
+    <div class="row separator"></div>
+    <div class="container">
+        <div class="col-md-5">
+            <div class="intro-img">
+                <div class="caption">
+                    <h3>Share between devices</h3>
+                    <p>Save your models in a secure place and view them anywhere you want by downloading our app on your smartphone or tablet</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+            <div class="intro-img">            
+                <img style="height: 100px;" src="/static/images/android_1.png">
+            </div>
+        </div>
+    </div>
+    <div class="row separator"></div>
+{% endblock %}

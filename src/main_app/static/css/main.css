@@ -104,7 +104,7 @@ h1.navbar-logo {
 
 .intro-jumbotron {
   background: none;
-  height: 400px; }
+  height: 500px; }
   .intro-jumbotron img {
     position: relative;
     left: 50%;
@@ -370,5 +370,8 @@ ul.profile-nav-items {
 
 .panel-body h2, .panel-body p {
   padding: 0 20px; }
+
+span.glyphiconama.glyphicon-option-vertical {
+  float: right !important; }
 
 /*# sourceMappingURL=main.css.map */

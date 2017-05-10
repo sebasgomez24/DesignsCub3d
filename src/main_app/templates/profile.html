@@ -257,12 +257,15 @@
                                             {{ item.timestamp }}                                            
                                         <!--    {{ project.timestamp|timesince }} ago -->
                                         </div>
-                                        <div class="col-sm-2">
+                                        <div class="col-sm-1">
                                             {% if item.item_type == 'project' %}
-                                            AR Project
+                                            3D
                                             {% elif item.item_type == 'note' %}
                                             Note
                                             {% endif %}
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <span class="glyphicon glyphicon-option-vertical"></span>
                                         </div>
                                     </div>
                                 </a>

@@ -64,6 +64,7 @@ $(document).ready(function(){
         $('.update-note-form').css("display", "block");        
     });
 
+    
     $('#introduction-trash').click(function(){
         $('.to-remove').remove();
     });

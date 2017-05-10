@@ -1,0 +1,375 @@
+/* Variables */
+
+$parallels_color: #3B6F7C
+$bp_xs: 320
+$bp_s: 480
+$bp_m: 768
+$bp_l: 992
+$bp_xl: 1200
+
+$box_1 : 1000px
+$box_2 : 1800px
+$box_3 : 1350px
+$box_4 : 1850px 
+$box_5 : 600px
+$box_6 : 3000px
+
+$box_1-img : 400px
+$box_2-img : 250px
+$box_3-img : 250px
+$box_4-img : 200px
+$app_button : 75px 
+$flags : 35px
+$icons : 50px
+
+$box-color_lrg : 700px
+$box-color_med : 600px
+$box-color_sml : 250px
+
+$disclaimer : 1100px
+
+$centered-outside : 500px
+
+$bp-icon : 400px
+$bp-text : 750px
+
+/* SASS Functions and Mixins */
+
+@function calc-percent($target, $container)
+	@return ($target/$container) * 100%
+
+/* Font-face */
+
+@font-face
+	font-family: montserrat
+	src: url('/static/fonts/Montserrat/Montserrat-Light.otf')
+@font-face
+	font-family: montserrat-light
+	src: url('/static/fonts/Montserrat-UltraLight.otf')
+@font-face
+	font-family: dosis
+	src: url('/static/fonts/Dosis-Regular.ttf')
+
+
+/* Important Misc & Overrides ONLY */
+
+body
+	overflow-x: hidden
+
+nav
+	background: #fff !important
+	border: none !important
+	font-family: montserrat !important
+	opacity: .8
+	a
+		color: $parallels_color !important
+		font-size: 1.25em
+		&:hover
+			color: white !important
+	&:hover:li
+		background: $parallels_color !important
+
+.navbar-nav
+	font-family: montserrat !important
+	position: relative
+	left: 50%
+	transform: translate(-50%, 0)
+	li:nth-child(2)
+		padding-right: 15px
+
+/* Front page styles from top of page to bottom */
+
+
+@mixin box
+	height: 1000px
+	font-family: montserrat-light
+	position: relative
+
+.centered-outside
+	height: $centered-outside
+	// @ md-lg height: 1000px
+	position: relative
+	.centered-text
+		width: 100%
+		margin: 0
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		text-align: center
+	.centered-image
+		margin: 0
+		padding: 0 25px
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+
+.box-white
+	@include box
+	background: white
+	height: $box_4
+	text-align: center
+	.btn.btn-default
+		background: transparent
+		border: 1px solid $parallels_color
+		&:hover
+			background: $parallels_color
+	&:first-of-type
+		background: url('/static/images/Up_Shadow.png')
+		background-size: cover
+		overflow: hidden
+		text-align: left
+		height: $box_1
+		h1
+			margin-top: -100px
+		img
+			height: $box_1-img
+		// @ md-lg height: 500px
+	.title
+		height: 300px
+	.image-row
+		height: 250px
+		img
+			height: $box_4-img
+	.text-row
+		height: 250px	
+
+.box-color
+	@include box
+	background: $parallels_color
+	color: white
+	height: $box_2
+	h4
+		text-align: justify
+	img
+		height: $box_2-img
+	.sml
+		height: $box-color_sml
+		margin-bottom: -200px
+	.med
+		height: $box-color_med
+	.lrg
+		height: $box-color_lrg
+		.centered-text
+			padding: 0
+			width: 80%	
+	.colored
+		color: white
+		background: $parallels_color
+		border: 1px solid white
+		padding: 15px 50px
+		border-radius: 2.5px
+		position: absolute
+		left: 50%
+		transform: translate(-50%, 0)
+		a
+			color: white
+
+.box-black
+	@include box
+	//height: 1750px
+	height: $box_3
+	background: black
+	color: white
+	text-align: center
+	span
+		color: #00E7E7 //$parallels_color
+	img
+		height: $box_3-img
+	.fullpage
+		height: 100%
+		width: 100%
+		overflow: hidden
+		background-size: cover
+		background: black
+	.black-page-icon
+		height: $bp-icon
+	.black-page-text
+		height: $bp-text
+	&:last-of-type
+		height: $box_6
+		img
+			height: $app_button
+		.disclaimer-container
+			width: 100%
+			//width: 900px
+		.disclaimer
+			height: $disclaimer
+			margin-top: 50px
+			p
+				text-align: justify
+				padding: 25px
+		.links
+			height: 150px
+			img
+				height: $flags
+				margin: 0 25px 0 15px
+		.socialmedia
+			height: 150px !important
+			img
+				height: $icons
+		.centered-outside.download
+			height: 200px
+		
+
+.box-image
+	@include box
+	background: url('/static/images/meeting.jpg')
+	color: white
+	background-size: cover
+	overflow: hidden
+	height: $box_5
+	.centered-image
+		width: 100%
+		h1
+			text-align: center
+	.image-btn
+		color: white
+		background: none
+		border: 1px solid white
+		padding: 15px 50px
+		border-radius: 2.5px
+		position: absolute
+		left: 50%
+		transform: translate(-50%, 0)
+
+
+/* Use this section to add BOOTSTRAP OVERRIDES only */
+
+.btn.btn-default.image-btn:hover
+	background: white
+	color: $parallels_color
+
+.btn.btn-default.colored:hover
+	background: white
+	border: 1px solid $parallels_color
+	color: $parallels_color
+	a
+		color: $parallels_color
+
+.btn-color
+	color: $parallels_color
+	padding: 15px 50px
+
+.btn:hover
+	border-radius: 5px
+	border: 1px solid white
+	color: white
+	background: $parallels_color
+
+/*==========  Media Queries Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	$box_2 : 1800px
+	$box_2-img : 300px
+
+	.box-color
+		height: $box_2
+		img
+			height: $box_2-img
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	$box_2 : 1500px
+	$box_2-img : 400px
+	$box_6 : 2050px
+	$box-color_sml : 450px
+	$box-color_med : 500px
+	$box-color_lrg : 600px
+	$disclaimer : 600px
+
+	.box-color
+		height: $box_2
+		img
+			height: $box_2-img
+		.sml
+			height: $box-color_sml
+		.med
+			height: $box-color_med
+		.lrg
+			height: $box-color_lrg
+
+	.box-black:last-of-type
+		height: $box_6
+		.disclaimer
+			height: $disclaimer
+	
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	$centered-outside : 1000px
+	$box_2 : 1250px
+	$box_3 : 1000px
+	$box_5 : 1000px
+	$box_6 : 1500px
+	$black-page-icon : 350px
+	$black-page-text : 600px
+	$box-color_sml : 350px
+	$icons: 30px
+	$box_1-img : 550px
+
+	.centered-outside
+		height: $centered-outside
+
+	.box-white:first-of-type
+		img
+			height: $box_1-img
+
+	.box-color
+		height: $box_2
+		.sml
+			height: $box-color_sml
+			margin: 0
+
+	.box-black
+		height: $box_3
+		.black-page-icon
+			height: $black-page-icon
+		.black-page-text
+			height: $black-page-text
+			h1
+				margin-top: -75px
+			h4
+				font-size: 20px
+
+	.box-white
+		p
+			padding: 0 10%
+
+	.box-image
+		height: $box_5
+
+	.box-black:last-of-type
+		height: $box_6
+		.socialmedia
+			img 
+				height: $icons
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	$box_6 : 1250px
+
+	.centered-text
+		padding: 0 50px
+
+	.centered-image
+		padding: 0 50px
+
+	.box-black:last-of-type
+		height: $box_6
+		.disclaimer-container
+			width: 900px
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.centered-text
+		padding: 0 10%
+
+@media only screen and (min-width : 1700px)
+	.centered-text
+		padding: 0 25%
+
+	.box-white:first-of-type
+		.centered-text
+			padding: 0 10%

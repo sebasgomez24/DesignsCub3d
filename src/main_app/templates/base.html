@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
-        <title>DesignsCub3d</title>
+        <title>Parallel</title>
     </head>
     <body>
         <div class="page-filter"></div>      
@@ -57,7 +57,7 @@
             {% if user.is_authenticated %}
                 <form class="navbar-form navbar-left" method="GET" action="" style="margin-top: 15px;">
                     <div class="input-group" id="search_bar">
-                      <input id="search-bar" type="text" name="q" class="form-control" placeholder="Search Designscub3d..." value="{{ request.get.query }}"/>
+                      <input id="search-bar" type="text" name="q" class="form-control" placeholder="Search Parallel..." value="{{ request.get.query }}"/>
                       <span class="input-group-btn">
                         <button class="btn btn-default" type="submit" value="search">
                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -81,7 +81,7 @@
                 </ul>
                 {% else %}
                 <div class="nav navbar-nav navbar-left">
-                    <h1 class="navbar-logo">DesignsCub3d</h1>
+                    <h1 class="navbar-logo">Parallel</h1>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li><div class="btn btn-default green" id="login-click-btn">sign in</div></li>                                   

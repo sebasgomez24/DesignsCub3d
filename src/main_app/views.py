@@ -26,13 +26,17 @@ def base(request):
     return render(request, 'base.html', context)
 
 def index(request):
+    context = {}
+    return render(request, 'index.html', context)
+
+def homepage(request):
     register_form = RegisterForm()
     login_form = LoginForm()
     context = {
         'register_form':register_form,
         'login_form':login_form,
     }
-    return render(request, 'index.html', context)
+    return render(request, 'homepage.html', context)
 
 def profile(request, username):
     projects = Project.objects.all().order_by('-timestamp')
@@ -207,10 +211,10 @@ def login_view(request):
                 return redirect('profile', user)
             else:
                 messages.error(request, 'Incorrect username/password combination')
-                return redirect('index')
+                return redirect('homepage')
     else:
         login_form = LoginForm()
-        return render(request, 'index.html', {'login_form':login_form})
+        return render(request, 'homepage.html', {'login_form':login_form})
 
 def logout_view(request, user):
     logout(request)

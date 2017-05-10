@@ -1,0 +1,294 @@
+/* Variables */
+/* SASS Functions and Mixins */
+/* Font-face */
+@font-face {
+  font-family: montserrat;
+  src: url("/static/fonts/Montserrat/Montserrat-Light.otf"); }
+@font-face {
+  font-family: montserrat-light;
+  src: url("/static/fonts/Montserrat-UltraLight.otf"); }
+@font-face {
+  font-family: dosis;
+  src: url("/static/fonts/Dosis-Regular.ttf"); }
+/* Important Misc & Overrides ONLY */
+body {
+  overflow-x: hidden; }
+
+nav {
+  background: #fff !important;
+  border: none !important;
+  font-family: montserrat !important;
+  opacity: 0.8; }
+  nav a {
+    color: #3B6F7C !important;
+    font-size: 1.25em; }
+    nav a:hover {
+      color: white !important; }
+  nav:hover:li {
+    background: #3B6F7C !important; }
+
+.navbar-nav {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0); }
+  .navbar-nav li:nth-child(2) {
+    padding-right: 15px; }
+
+/* Front page styles from top of page to bottom */
+.centered-outside {
+  height: 500px;
+  position: relative; }
+  .centered-outside .centered-text {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .centered-outside .centered-image {
+    margin: 0;
+    padding: 0 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+.box-white {
+  height: 1000px;
+  font-family: montserrat-light;
+  position: relative;
+  background: white;
+  height: 1850px;
+  text-align: center; }
+  .box-white .btn.btn-default {
+    background: transparent;
+    border: 1px solid #3B6F7C; }
+    .box-white .btn.btn-default:hover {
+      background: #3B6F7C; }
+  .box-white:first-of-type {
+    background: url("/static/images/Up_Shadow.png");
+    background-size: cover;
+    overflow: hidden;
+    text-align: left;
+    height: 1000px; }
+    .box-white:first-of-type h1 {
+      margin-top: -100px; }
+    .box-white:first-of-type img {
+      height: 400px; }
+  .box-white .title {
+    height: 300px; }
+  .box-white .image-row {
+    height: 250px; }
+    .box-white .image-row img {
+      height: 200px; }
+  .box-white .text-row {
+    height: 250px; }
+
+.box-color {
+  height: 1000px;
+  font-family: montserrat-light;
+  position: relative;
+  background: #3B6F7C;
+  color: white;
+  height: 1800px; }
+  .box-color h4 {
+    text-align: justify; }
+  .box-color img {
+    height: 250px; }
+  .box-color .sml {
+    height: 250px;
+    margin-bottom: -200px; }
+  .box-color .med {
+    height: 600px; }
+  .box-color .lrg {
+    height: 700px; }
+    .box-color .lrg .centered-text {
+      padding: 0;
+      width: 80%; }
+  .box-color .colored {
+    color: white;
+    background: #3B6F7C;
+    border: 1px solid white;
+    padding: 15px 50px;
+    border-radius: 2.5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); }
+    .box-color .colored a {
+      color: white; }
+
+.box-black {
+  height: 1000px;
+  font-family: montserrat-light;
+  position: relative;
+  height: 1350px;
+  background: black;
+  color: white;
+  text-align: center; }
+  .box-black span {
+    color: #00E7E7; }
+  .box-black img {
+    height: 250px; }
+  .box-black .fullpage {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background: black; }
+  .box-black .black-page-icon {
+    height: 400px; }
+  .box-black .black-page-text {
+    height: 750px; }
+  .box-black:last-of-type {
+    height: 3000px; }
+    .box-black:last-of-type img {
+      height: 75px; }
+    .box-black:last-of-type .disclaimer-container {
+      width: 100%; }
+    .box-black:last-of-type .disclaimer {
+      height: 1100px;
+      margin-top: 50px; }
+      .box-black:last-of-type .disclaimer p {
+        text-align: justify;
+        padding: 25px; }
+    .box-black:last-of-type .links {
+      height: 150px; }
+      .box-black:last-of-type .links img {
+        height: 35px;
+        margin: 0 25px 0 15px; }
+    .box-black:last-of-type .socialmedia {
+      height: 150px !important; }
+      .box-black:last-of-type .socialmedia img {
+        height: 50px; }
+    .box-black:last-of-type .centered-outside.download {
+      height: 200px; }
+
+.box-image {
+  height: 1000px;
+  font-family: montserrat-light;
+  position: relative;
+  background: url("/static/images/meeting.jpg");
+  color: white;
+  background-size: cover;
+  overflow: hidden;
+  height: 600px; }
+  .box-image .centered-image {
+    width: 100%; }
+    .box-image .centered-image h1 {
+      text-align: center; }
+  .box-image .image-btn {
+    color: white;
+    background: none;
+    border: 1px solid white;
+    padding: 15px 50px;
+    border-radius: 2.5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); }
+
+/* Use this section to add BOOTSTRAP OVERRIDES only */
+.btn.btn-default.image-btn:hover {
+  background: white;
+  color: #3B6F7C; }
+
+.btn.btn-default.colored:hover {
+  background: white;
+  border: 1px solid #3B6F7C;
+  color: #3B6F7C; }
+  .btn.btn-default.colored:hover a {
+    color: #3B6F7C; }
+
+.btn-color {
+  color: #3B6F7C;
+  padding: 15px 50px; }
+
+.btn:hover {
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  background: #3B6F7C; }
+
+/*==========  Media Queries Mobile First Method  ========== */
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .box-color {
+    height: 1800px; }
+    .box-color img {
+      height: 300px; } }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .box-color {
+    height: 1500px; }
+    .box-color img {
+      height: 400px; }
+    .box-color .sml {
+      height: 450px; }
+    .box-color .med {
+      height: 500px; }
+    .box-color .lrg {
+      height: 600px; }
+
+  .box-black:last-of-type {
+    height: 2050px; }
+    .box-black:last-of-type .disclaimer {
+      height: 600px; } }
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .centered-outside {
+    height: 1000px; }
+
+  .box-white:first-of-type img {
+    height: 550px; }
+
+  .box-color {
+    height: 1250px; }
+    .box-color .sml {
+      height: 350px;
+      margin: 0; }
+
+  .box-black {
+    height: 1000px; }
+    .box-black .black-page-icon {
+      height: 350px; }
+    .box-black .black-page-text {
+      height: 600px; }
+      .box-black .black-page-text h1 {
+        margin-top: -75px; }
+      .box-black .black-page-text h4 {
+        font-size: 20px; }
+
+  .box-white p {
+    padding: 0 10%; }
+
+  .box-image {
+    height: 1000px; }
+
+  .box-black:last-of-type {
+    height: 1500px; }
+    .box-black:last-of-type .socialmedia img {
+      height: 30px; } }
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .centered-text {
+    padding: 0 50px; }
+
+  .centered-image {
+    padding: 0 50px; }
+
+  .box-black:last-of-type {
+    height: 1250px; }
+    .box-black:last-of-type .disclaimer-container {
+      width: 900px; } }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .centered-text {
+    padding: 0 10%; } }
+@media only screen and (min-width: 1700px) {
+  .centered-text {
+    padding: 0 25%; }
+
+  .box-white:first-of-type .centered-text {
+    padding: 0 10%; } }
+
+/*# sourceMappingURL=styles.css.map */

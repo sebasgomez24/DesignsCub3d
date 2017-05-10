@@ -1,75 +1,320 @@
-{% extends 'base.html' %}
 {% load staticfiles %}
-{% load bootstrap3 %}
 
-{% block content %}
-    <div class="jumbotron intro-jumbotron">
-        <img src="/static/images/rubiks-cub3.png">
-    </div>
-    <div class="container">
-        <div class="col-md-5">            
-            <h3>We at DesignsCub3d bring your ideas to life</h3>
-            <p>Load, store and view your 3D models on your computers or tablets and phones</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+        <title>Parallel</title>
+    </head>
+    <body>
+    <nav class="navbar navbar-default">
+        <div class="container"> 
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle Nav</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#about">About</a></li>
+
+                    <li><a class="navbar-brand" href="#">Parallel</a></li>
+
+                    <li><a href="#paradigm">Paradigm</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-3"></div>
-        <div class="col-md-4">            
-            <form class="register-form" enctype="multipart/form-data" method="post" action="/register/">
-                {% csrf_token %}
-                {% bootstrap_form register_form %}
-                <button class="btn btn-default green" type="submit" value="register">register</button>
-            </form>        
+    </nav>
+
+    <div class="box-white" id="#">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 pull-sm-7">
+                    <div class="centered-outside">
+                        <div class="centered-image">
+                            <img src="/static/images/pixel-white.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7 push-sm-5">
+                    <div class="centered-outside">
+                        <div class="centered-text">
+                            <h1><strong>Parallel</strong></h1>
+                            <h2>Welcome to the future of Augmented Reality Applications</h2>
+                            <br/>
+                            <p>Explore the exciting 3D world created especially for your phone. Download our app to find out what all the buzz is about!</p>
+                            <br/>
+                            <br/>
+                            <button class="btn btn-default btn-color">
+                                <a href="{% url 'homepage' %}">Sign Up to Get Started</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-    </div>
-    
-    <div class="banner">
-        <h1>Hello World, <br/><small>welcome to DesignsCub3d</small></h1>
     </div>
 
-    <div class="container">
-        <div class="col-md-5">
-            <div class="caption">
-                <h3>Upload 3D models</h3>
-                <p>Save your models in a secure place and view them anywhere you want by downloading our app on your smartphone or tablet</p>
+    <div class="box-color" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="centered-outside sml">
+                        <div class="centered-text">                            
+                            <h2>Say goodbye to flat images<br/>And hello to a 3D future</h2>    
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-5">
-            <div class="intro-img">
-                <img src="/static/images/3dmax.png">    
-            </div>
-        </div>
-    </div>
-    <div class="row separator"></div>
-    <div class="container">
-        <div class="col-md-5">
-            <div class="intro-img">
-                <img src="/static/images/sphere.png">
-            </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-5">            
-            <div class="caption">
-                <h3>View models in AR</h3>
-                <p>Save your models in a secure place and view them anywhere you want by downloading our app on your smartphone or tablet</p>
-            </div>
-        </div>
-    </div>
-    <div class="row separator"></div>
-    <div class="container">
-        <div class="col-md-5">
-            <div class="intro-img">
-                <div class="caption">
-                    <h3>Share between devices</h3>
-                    <p>Save your models in a secure place and view them anywhere you want by downloading our app on your smartphone or tablet</p>
+            <div class="row">                           
+                <div class="col-sm-6">
+                    <div class="centered-outside med">
+                        <div class="centered-image">
+                            <img src="/static/images/pixel-tablet.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="centered-outside lrg">
+                        <div class="centered-text">
+                            <h4 style="line-height: 1.5;"> <strong><em>Parallel</em></strong> is a mobile application created to bring interactivity to displaying 3D models. We create and receive 3D models and store them within our databases to give you the perfect environment to view and interact with them. From displaying entire buildings to fruit stands to populate your new empty store.
+
+                            <br/><br/>
+
+                            Your vision is our business. We use your mobile devices camera to show what your particular model will look like in the real world. You then have the option to place your model anywhere on the screen where it belongs. Move around while watching the camera to be immersed in the Augmented World and see the 3D models like real world entities.</h4>
+                            <br/>
+                            <button class="btn btn-default colored"><a href="{% url 'homepage' %}">Click to Learn More</a></button>
+                            <br/><br/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-5">
-            <div class="intro-img">            
-                <img src="/static/images/android.png">
+    </div>
+
+    <div class="box-black" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="centered-outside black-page-icon">
+                        <div class="centered-image">
+                            <img src="/static/images/ar.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="centered-outside black-page-text">
+                        <div class="centered-text">
+                            <h1 style="line-height: 1.25"><strong>Understanding
+                            <br/>Augmented Reality</strong></h1>
+                            <br/>
+                            <h4 style="line-height: 1.5">
+                            
+                            <strong><span>Aug·men·ted Re·al·i·ty</span></strong> &middot; <em>(n.) &middot;</em> 
+                            <span>1.</span> a technology that superimposes a computer-generated image on a user's view of the real world, thus providing a composite view.
+                            <br/><br/>
+                            <span>2.</span> the integration of digital information with the user's environment in real time. Unlike virtual reality, which creates a totally artificial environment, <span>augmented reality</span> uses the existing environment and overlays new information on top of it.
+                            <br/><br/>
+                            <span>So what does this all mean?</span> Simply put, <span>augmented reality</span> allows you to view 3D models using your devices camera to get a full 360 degree view.
+                            </h4>    
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="row separator"></div>
-{% endblock %}
+
+    <div class="box-white" id="paradigm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="centered-outside title">
+                        <div class="centered-text">
+                            <h1><strong>Display your 3D models.
+                            <br/>Anytime. Anywhere. </strong></h1>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-sm-12">
+                    <div class="centered-outside image-row">
+                        <div class="centered-image">
+                            <img src="/static/images/android.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="centered-outside text-row">
+                        <div class="centered-text">
+                            <h3><strong>Currently for Android devices</strong></h3>     
+                            <p>Our first itiration of <em>Parallel</em> runs on Android devices. While we realize Android is the larger market, plans for an iOS app are in the works. Find us on the Google Play store</p>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-sm-12">
+                    <div class="centered-outside image-row">
+                        <div class="centered-image">
+                            <img src="/static/images/ar2.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="centered-outside text-row">
+                        <div class="centered-text">
+                            <h3><strong>Full 360 degree views</strong></h3>
+                            <p>We use Vuforia, Kudan and other technologies to give you the most enhanced view. <em>Parallel</em> aims to facilitate the way we view Augmented Reality and 3D models.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-sm-12">
+                    <div class="centered-outside image-row">
+                        <div class="centered-image">
+                            <img src="/static/images/qr.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="centered-outside text-row">
+                        <div class="centered-text">
+                            <h3><strong>It all starts with a simple QR code</strong></h3>
+                            <p>Each 3D model has a unique QR code that helps us database and give you the best quality models available. A quick scan of a QR code will create the Augemnted Environemnt. Just as easily share your models with others using the same QR code to display your work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-image" id="team">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="centered-outside">
+                    <div class="centered-text">
+                        <h1>We're a team of digital entrepenuers with expertise and backgrounds in Programming, Engineering and Architecture.</h1>
+                        <br/><br/>
+                        <button class="btn btn-default image-btn"><strong>Meet the Team</strong></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-black" id="contact">
+        <div class="container disclaimer-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="centered-outside download">
+                        <div class="centered-image">
+                            <img src="/static/images/googleplay.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="centered-outside links">
+                        <div class="centered-text">
+                            <a href="" data-toggle="tooltip" title="English"><img src="/static/images/usa.png"/></a>
+                            <a href="" data-toggle="tooltip" title="Español"><img src="/static/images/colombia.png"/></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="centered-outside socialmedia">
+                                <div class="centered-image">
+                                    <a href="" data-toggle="tooltip" title="Android"><img src="/static/images/android2.png"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="centered-outside socialmedia">
+                                <div class="centered-image">
+                                    <a href="" data-toggle="tooltip" title="Unity"><img src="/static/images/unity.png"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="centered-outside socialmedia">
+                                <div class="centered-image">
+                                    <a href="" data-toggle="tooltip" title="QR Codes"><img src="/static/images/qr2.png"/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="centered-outside socialmedia">
+                                <div class="centered-image">
+                                    <a href="" data-toggle="tooltip" title="Contact Us"><img src="/static/images/message.png"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="centered-outside disclaimer">
+                        <p><span><strong>History</strong></span><br/>                    
+                        <span>"</span>Boeing researcher Thomas Caudell coined the term augmented reality in 1990, to describe how the head-mounted displays that electricians used when assembling complicated wiring harnesses worked. One of the first commercial applications of AR technology was the yellow "first down" line that began appearing in televised football games sometime in 1998. Today, Google glass and heads-up displays in car windshields are perhaps the most well-known consumer AR products, but the technology is used in many industries including healthcare, public safety, gas and oil, tourism and marketing.
+
+                        Augmented reality apps are written in special 3D programs that allow the developer to tie animation or contextual digital information in the computer program to an augmented reality "marker" in the real world. When a computing device's AR app or browser plug-in receives digital information from a known marker, it begins to execute the marker's code and layer the correct image or images.<span>"</span> &middot; <small><a href="http://whatis.techtarget.com/definition/augmented-reality-AR">source</a></small>
+                        <br/><br/>
+                        <span><strong>AR v. VR</strong></span><br/>
+                        While augmented reality and virtual reality share some things in common, they are two different technologies. AR augments reality, but doesn't replace it. VR completely replaces your surroundings with a virtual environment. Therefore, any hardware that combines digital content with your actual surroundings is an AR device. Hardware that operates independently from your location and encompasses your vision is a VR device.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="centered-outside disclaimer">
+                        <p> 
+                        <span><strong>Did you know?</strong></span><br/>
+                        <span>&middot;</span> About 75 percent of the Forbes World's Most Valuable Brands have created some form of virtual reality or augmented reality experience for customers or employees, or are themselves developing these technologies. Given that this study was conducted in October 2015, the number is likely significantly higher. <br/><br/>
+
+                        <span>&middot;</span> Both Generation Z and Millennials are interested in trying augmented reality, but Baby Boomers aren't far behind. Baby Boomers also have positive feelings about augmented reality. <br/><br/>
+
+                        <span>&middot;</span> Typically, when people think of augmented reality, they think of computer games. This is unfortunate, because some of the best and most interesting augmented reality experiences out today have nothing to do with gaming. There are augmented reality travel experiences, apps created to help ease your work, and much, much more. <br/><br/>
+
+                        <span>&middot;</span> Since AR can augment the effectiveness of navigation devices, it was no wonder it was applied far wider than only for commercial purposes.  In 1999, NASA’s x-38 was flown utilising a special AR dashboard for navigation purposes. <br/><br/>
+
+                        <span>&middot;</span> ‘Pokémon Go’, which is a perfect example of AR application, caused quite a stir recently. Its enthusiasts realised that by trying to ‘catch ’em all’ they actually need to move around. No wonder that a significant number of AR applications try to come up with ideas to help us stay healthy and make a bigger impact on us. <br/><br/>
+
+                        </p>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="{% static 'javascript/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/main.js' %}"></script>
+    </body>
+</html>
